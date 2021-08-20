@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>D CODE SHOW</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+	body{
+		background: linear-gradient(rgba(37, 196, 224, 0.5),rgba(204, 26, 195, 0.5));
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100vh;
+		
+	}
+	.show-details .btn{
+		background-color: black;
+		color: white;
+		position: relative;
+		margin-left: 45%;
+	}
+	.show-me{
+		background: rgb(22, 21, 21);
+		height: 81vh;
+		color: rgb(252, 247, 247);
+		font-size: 40px;
+		font-weight: 600;
+		letter-spacing: 2px;
+		padding: 20px 20px 20px 20px;
+		display: none;
+		border: 1px solid #ddd;
+		position: relative;
+		margin-top: 5%;
+	}
+	.show-me .last{
+		position: absolute;
+		margin-left: 65%;
+	}
+
+	@media only screen and (max-width: 1200px){
+		.show-details .btn{
+		background-color: black;
+		color: white;
+		position: relative;
+		font-size: 24px;
+		margin-left: 42%;
+		margin-top: 9%;
+		width: 140px;
+		height: 48px;
+	}
+	.show-me .last{
+		position: absolute;
+		margin-top: 11%;
+	}
+	}
+</style>
+</head>
+<body>
+
+<div class="show-details">
+	<button class="btn btnClick">Read More</button>
+	<div class="show-me">
+		<br>Dear,<br>
+	    Legend LOLO,</span><br><br>
+		             I really don't know from where to start and where to put a full stop. I'll try to keep it short. For me you are the most precious and special gift from GNIT and I really mean it. Just stay the same as you are, never ever change yourself, you are the best you know ?? Yes !! You are the best.<br>Be like the sun as always and<br> one more thing .....<br><br>"I have loved you for a thousand years,<br>I'll love you for a thousand more"<br><br>Thank you for everything ......<br><br>
+					                         <div class="last"> With love,<br>L E G L O </div>
+	</div>
+</div>
+
+
+<script src="js/jquery-latest.min.js"></script>
+<script>
+	$(".btnClick").click(function(event) {
+		var x = $(this).text();
+		if (x == "Read More") 
+		{
+			$(this).text("Read Less");
+			$(this).parent(".show-details").find('.show-me').slideDown();
+		}
+		else
+		{
+			$(this).text("Read More");
+			$(this).parent(".show-details").find('.show-me').slideUp();
+		}
+	});
+</script>
+</body>
+</html>
